@@ -1,5 +1,14 @@
 # Daily Stand Up Notes
-## 03.23.2022
+## 03.22.2022
 * Set up group repo
+* Set up group kanban
+* Set up basic project structure, with HTML and CSS
+
+## 03.23.2022
 * Worked on wireframe
-* 
+* Finished Github module
+* Set up basic CSS styles for overall look
+  * Color scheme is very WIP
+* Set up basic structure of HTML page
+  * This is open to drastic change depending on API / design used
+* Created script file, added some menu toggling functionality
