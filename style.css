@@ -1,0 +1,27 @@
+html {
+    background-color: gray;
+    height: 100%
+}
+
+#container {
+    align-items: flex-start;
+    height: 200px;
+    width: 300px;
+    margin: 25px auto;
+    text-align: left;
+    
+}
+
+#image {
+    max-height: 500px;
+    width: auto;
+    align-self: center;
+}
+
+.btn {
+    align-items: center;
+    margin-left: auto;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+}
