@@ -12,3 +12,15 @@
 * Set up basic structure of HTML page
   * This is open to drastic change depending on API / design used
 * Created script file, added some menu toggling functionality
+
+## 03.24.2022
+* Removed menu toggling
+* Making progress on wireframe
+* Potentially rehauling the CSS/HTML
+* API connection established
+
+# 03.25.2022
+* Working mostly on displaying data from API
+* Finished wireframe
+* Settled (mostly) on color scheme
+* Tried 2937810298 ways to display data, cried a little

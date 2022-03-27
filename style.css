@@ -1,69 +1,31 @@
+/* variables */
+:root {
+  --body-bg: #F0EFE5;
+  --accent-bg: #AD8945;
+  --border-color: 57, 22%, 62%;
+  --text-color: #251605;
+  --accent-color: #B04830;
+  
+  --body-font: 'Literata', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  --header-font: 'Kings', cursive, serif;
+}
+
 /* general styling */
 body {
-  font: normal 1.15em / 1.75 "Nanum Gothic Coding", "Andale Mono", Consolas, 'Courier New', Courier, monospace;
-  background-color: wheat;
-  color: midnightblue;
+  font: normal 1.15em / 1.75 var(--body-font);
+  background-color: var(--body-bg);
+  background: var(--body-bg) url('bg.jpg') no-repeat center / cover fixed;
+  background-blend-mode: overlay;
+  color: var(--text-color);
   box-sizing: border-box;
-  border: 3em solid tan;
+  border: 3em solid hsla(var(--border-color), 45%);
   margin: 0;
   min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Gaegu', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-/* sidebar */
-#menuToggle {
-  display: none;
-}
-
-#menuToggle + label {
-  cursor: pointer;
-  display: block;
-  user-select: none;
-  z-index: 2;
-  position: absolute;
-  top: 0.5em;
-  left: 0.5em;
-  font-weight: bold;
-  color: oldlace;
-  background-color: darkslategray;
-  border: 2px solid oldlace;
-}
-
-#menuToggle + label:focus {
-  outline: #000 dotted 3px;
-}
-
-#menu {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  left: -40%;
-  width: 30%;
-  height: 100%;
-  padding: 4em 2em 2em;
-  background-color: sienna;
-  transition: all 0.5s ease-in-out;
-}
-
-/* menu links */
-#menu a {
-  display: block;
-  padding: 1em 1.5em;
-  margin-bottom: 0.5em;
-  color: paleturquoise;
-  font-weight: bold;
-}
-
-#menu a:hover {
-  background-color: antiquewhite;
-  color: darkslategray;
-}
-
-#menuToggle:checked ~ #menu {
-  left: 0;
+  font-family: var(--header-font);
+  font-weight: normal;
 }
 
 /* scrollbox */
@@ -72,8 +34,15 @@ main {
   min-width: calc(100vh - 6em);
   max-height: calc(100vh - 6em);
   overflow-x: auto;
+  padding: 1.5em;
 }
 
-section {
-  padding: 4em;
+/* boxes containing api information */
+#info {
+  width: 20em;
+  height: 25em;
+  margin: 0 auto;
+  display: flex;
+  background-color: var(--body-bg);
+  padding: 1em;
 }

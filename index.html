@@ -16,34 +16,26 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Kings&family=Literata:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<main id="content" tabindex="-1">
-
-  <input type="checkbox" name="menuToggle" id="menuToggle" aria-label="menuToggle">
-  <label for="menuToggle" title="Toggles the left sidebar" tabindex="0">click me!</label>
-
-  <nav id="menu">
-    <a href="http://">hi</a>
-  </nav>
-
-  <header id="banner">
-    <h1>hello</h1>
-  </header>
+<main id="content">
 
   <section id="info">
-    <h1>there is this</h1>
-    <p>hi</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate odio inventore, dolores minus repudiandae officiis harum enim, ullam, earum voluptatem porro quia. Harum quibusdam consequuntur, quidem expedita quas iure! Alias!</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur consequuntur, fuga doloremque aut soluta nulla distinctio voluptates sint natus nisi ipsa dolorem debitis veniam voluptas et! Veritatis deleniti ut quos?</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore voluptatibus exercitationem quam incidunt asperiores est, quasi ipsam animi, quisquam nemo nobis, sed architecto ducimus a repellat porro odio minus at.</p>
-  </section>  
+    <article id="spellCard">
+      <a href="http://" onclick="generateSpell()">click me!</a>
+    </article>
+
+    <div id="fields"></div>
+
+    <button type="button" id="generateSpell">grab a new spell</button>
+  </section>
 </main>
 
 <footer>
 </footer>
   
+<script src="scripts.js"></script>
 </body>
 </html>
