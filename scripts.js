@@ -43,37 +43,62 @@ function displayData(obj) {
       let title = document.createElement("h2");
       let field = document.createElement("p");
 
-      // loop through the keys and print them out in headers
-      body.appendChild(title);
-      title.innerHTML = key;
-
       // check if the element is another obj, an array, or a string
       switch (Object.getPrototypeOf(element)) {
         case Object.prototype:
+          let value = iterate(element);
 
-          // iterate through the object's properties
-          iterate(element);
+          fields.append(title);
+          let contentBody = title.insertAdjacentElement('afterend', field);
 
-          console.log(element);
+          title.innerHTML = key;
+          // theres a lot of objects within objects...
+          if (isObject(value) && !(typeof value == "string")) {
+            let deepValue = iterate(value);
+            console.log(deepValue);
+          } else {
+            contentBody.innerHTML = value;
+          }
           break;
         case Array.prototype:
           // convert the element from object to array then loop through the array's objects
           let array = Array.from(element);
           // first, check if array is NOT empty
-          if (!array.length == 0) {
+          if (!(array.length == 0)) {
+            // then add the name of each array to tablehead
+            table.append(row);
+            let header = document.createElement('th');
+            let thead = row.appendChild(header);
+            thead.innerHTML = key;
+            
+            // loop through the array
             array.forEach(arrItem => {
               // check if the array is storing an obj
               if (isObject(arrItem)) {
-                iterate(arrItem);
+                // if it is, then loop through and
+                // print out the result
+                let value = iterate(arrItem);
+                let item = thead.insertAdjacentElement('afterend', cell);
+                item.innerHTML += `<span class="tag">${value}</span>`;
               } else {
                 // else just print the array item
-                console.log(arrItem);
+                let item = thead.insertAdjacentElement('afterend', cell);
+                item.innerHTML += `<span class="tag">${arrItem}</span>`;
               }
             });
           }
           break;
         default:
-          console.log(key + ": " + element);
+          // lets remove the key-value pairs that have index or url
+          if (checkKey(key)) {
+            delete key;
+          } else {
+            // then loop through the keys and print them out in headers
+            fields.append(title);
+            title.innerHTML = key;
+            let content = title.insertAdjacentElement("afterend", field);
+            content.innerHTML = element;
+          }
           break;
       }
     }
@@ -96,6 +121,17 @@ function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
 
+// no need to display url or index or _id tbqh
+// we're going to check any key against url, index, or _id!
+function checkKey(key) {
+  const array = ["url", "index", "_id"];
+  if (array.includes(key)) {
+    return true;
+  }
+
+  return false;
+}
+
 // sometimes there's objects within objects, so we want to test if something IS an object
 function isObject(obj) {
   if (typeof obj === "object") {
@@ -104,31 +140,36 @@ function isObject(obj) {
         return true;
       }
     }    
-  } else {
-    return false;
-  }
+  } 
+
+  return false;
 };
 
 // ... then recursively loop through the object's properties!
 // link to solution: https://stackoverflow.com/a/27124279
 function iterate(obj) {
   for (const key in obj) {
-    if (obj.hasOwnProperty(key)) {
+    // check if the object has properties + keys are valid
+    if (obj.hasOwnProperty(key) && (checkKey(key) == false)) {
       let value = obj[key];
 
       // if the value is another object, keep looping through.
-      // otherwise, just return the key AND value
       if (isObject(value)) {
         iterate(value);
       } else {
         return value;
       }
+    } else {
+      delete key;
     }
   }
 };
 
 // we need to clear all data to grab a fresh spell
 function clear() {
-  const body = document.querySelector("#spellCard");
-  return body.innerHTML = "";
+  let fields = document.querySelector("#spellFields");
+  let table = document.querySelector("#spellData");
+  
+  fields.innerHTML = "";
+  table.innerHTML = "";
 }

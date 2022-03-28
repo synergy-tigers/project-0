@@ -24,3 +24,9 @@
 * Finished wireframe
 * Settled (mostly) on color scheme
 * Tried 2937810298 ways to display data, cried a little
+
+# 03.27.2022
+* Finally figured out how to loop through the data
+* Making some headway on creating the needed elements
+* Blocker: objects within objects within objects within objects
+* 

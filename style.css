@@ -39,10 +39,41 @@ main {
 
 /* boxes containing api information */
 #info {
-  width: 20em;
-  height: 25em;
   margin: 0 auto;
-  display: flex;
   background-color: var(--body-bg);
   padding: 1em;
+}
+
+/* style the spell info */
+#spellCard {
+  display: flex;
+  align-items: center;
+}
+
+#spellFields {
+  flex: 1 1 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#spellFields h2 {
+  margin: 0;
+}
+
+#spellData {
+  flex: 1 1 0;
+}
+
+#spellData {
+  border: 1px solid hsl(var(--border-color));
+}
+
+#generateSpell {
+  display: block;
+  margin: 0 auto 1em;
+}
+
+.tag {
+  padding: 0.25em 0.5em;
+  margin-right: 0.5em;
 }
