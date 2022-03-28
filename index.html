@@ -19,13 +19,12 @@
     <meta name="revised" content="03/23/2022"/>
     <meta name="keywords" content="Meat Loaf, Meatloaf, artist, Marvin Lee Aday, singer, rock n' roll, rock, 70's greatest hits"/>
 
-    <link rel="stylesheet" href="styling.css"/>
-    <script src="controller.js"></script>
-
+    <link rel="stylesheet" href="style.css"/>
+    <script src="main.js"></script>
 </head>
 
 <body>
-
+    
     <h1>RIP Meat Loaf</h1>
     <h2>Below is some information on Marvin Lee Aday</h2>
 
@@ -33,10 +32,7 @@
 
         <a href="https://www.rollingstone.com/music/music-features/meat-loaf-best-songs-1288632/">Checkout some of his most famous hits!</a>
         <p>Now, everyone is a little different but these are my top 5 favorites if you want to have a good time:</p>
-<!--
-    Make a boarder in css? probably black and make the background red 
--->
-<link rel="stylesheet" href="style.css">
+
         <table class="tables">
             <tr>
                 <th>Song Title</th>
@@ -73,65 +69,52 @@
             <li>Lastly, he also coached a girls softball team located in Redding, CT in the earky 90's</li>
         </ul>
         <p>He will be missed by all those who had the tromendous pleasure of hearing his music...  Which will hopefull include you after you leave this page</p>
-        <!--
-            Center the following two lines 
-        -->
+       
         <h2>Below are some of the many pictures of meatloaf throught his life</h2>
         <h3>Marvin Lee Aday (1947-2022)</h3>
-<!--
-    <div>
-        <p>Meat Loaf making a group of kids in Redding, CT feel like rockstars!</p>
-        <img src="https://s.hdnux.com/photos/01/23/55/01/21942379/3/1200x0.jpg"
-            alt="Meat Loaf on stage in 2019" height="200px" />
-    </div>
--->
-</section>
-<body>
     
-<link rel="stylesheet" href="style.css">
-
-<body>
     <div>
         <button id="previous" class="btn">Previous</button>
         <button id="next" class="btn">Next</button>
+        
     </div>
     <div>
-        <div id="container">
+        <div id="picture-array">
             <img id="image" src="https://s.yimg.com/ny/api/res/1.2/F9fvvfdL_RxhxKvrb2e36w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTcwNTtoPTExNDc7Y2Y9d2VicA--/https://s.yimg.com/uu/api/res/1.2/Q.XsOpWKlYjKpb5VMsyU6g--~B/aD0xNTAwO3c9OTIyO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insider_articles_922/1d683e9e95b3cfd74da0275c1eee191c">
             
     </div>
-        
-    <script src="main.js"></script>
-</body>
-<!--
-    <div>
-        <p>Meat Loaf as Eddie in "The Rocky Horror Picture Show"</p>
-        <img src="https://s.yimg.com/ny/api/res/1.2/F9fvvfdL_RxhxKvrb2e36w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTcwNTtoPTExNDc7Y2Y9d2VicA--/https://s.yimg.com/uu/api/res/1.2/Q.XsOpWKlYjKpb5VMsyU6g--~B/aD0xNTAwO3c9OTIyO2FwcGlkPXl0YWNoeW9u/https://media.zenfs.com/en/insider_articles_922/1d683e9e95b3cfd74da0275c1eee191c"
-            alt="Meat Loaf starring as Eddie from The Rocky Horror Picture Show" height="200px" />
+    </section>
+    <section>
+        <div class="song-api">
+            <section>
+            <h2>type a song in</h2>
+            </section>
+    
+        <section tabindex="0" role="search">
+            <input aria-label="song name input" type="text" class="text-box" value="Bat Out of Hell" />
+            <button id="search">Search</button>
+        </section>
+         
+        <section class="results section">
+            <div class="song-results">
+                <div class="panel">
+                    <h3 id="name" class="song header">Bat Out of Hell</h3>              
+                
+                </div>
+            </div>
+        </section>
+
+
     </div>
-    <div>
-        <p>Marvin "Meat Loaf" Aday, Class of 1965</p>
-        <img src="https://michiganrockandrolllegends.com/images/Meatloaf%20closeJPEG%2065%20early%20Texas.jpg"
-            alt="Meat Loaf's highschool yearbook photo" height="200px" />
-            
-        <img src="https://i.ebayimg.com/images/g/b-kAAOSwHztiJopV/s-l500.jpg"
-            alt="Meat Loaf in a football uniform" height="200px" />
+    <div class="popup-holder">
+        <div class="popup">
+            <h2>Sorry, try again</h2>
+            <p id="error-message"></p>
+        </div>
     </div>
-    <div>
-        <p>Meat Loaf making a group of kids in Redding, CT feel like rockstars!</p>
-        <img src="https://s.hdnux.com/photos/01/23/55/01/21942379/3/1200x0.jpg"
-            alt="Meat Loaf on stage in 2019" height="200px" />
-    </div>
-    <div>
-        <p>Meat Loaf making a group of kids in Redding, CT feel like rockstars!</p>
-        <img src="https://s.hdnux.com/photos/01/23/55/01/21942379/3/1200x0.jpg"
-            alt="Meat Loaf on stage in 2019" height="200px" />
-    </div>
-    <div>
-        <p>Meat Loaf making a group of kids in Redding, CT feel like rockstars!</p>
-        <img src="https://s.hdnux.com/photos/01/23/55/01/21942379/3/1200x0.jpg"
-            alt="Meat Loaf on stage in 2019" height="200px" />
-    </div>
--->
+    <div id="decoration"></div>
+<script src="main.js"></script>
+</section>
+    
 </body>
 </html>
