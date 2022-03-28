@@ -1,5 +1,5 @@
 html {
-    background-color: rgb(167, 167, 167);
+    background-color: rgb(245, 218, 186);
     height: 100%
 }
 
@@ -9,7 +9,7 @@ table {
 
 th, td {
     border: 1px solid black;
-    background-color: rgba(255, 38, 38, 0.575);
+    background-color: rgba(253, 101, 101, 0.425);
     text-align: center;
   }
 
@@ -19,7 +19,7 @@ th, td {
     border-color: darkred;
 }
 
-#container {
+#picture-array {
     justify-content: flex-end;
     height: 200px;
     width: 300px;
@@ -39,4 +39,37 @@ th, td {
     height: 30px;
     width: 100px;
     text-align: center;
+}
+
+.rise-in {
+    animation: rise-in 1.0s forwards linear;
+}
+
+.results-section {
+    transform: translateY(100vh);
+}
+
+.song-results {
+    display: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+@keyframes rise-in {
+    from {
+        transform: translateY(-4000px) scale(0.1, 1.9);
+    }
+    35% {
+        transform: translateY(0) scale (0.85, 1.25);
+    }
+    45% {
+        transform: translateY(0) scale(1.15, 0.85);
+    }
+    55% {
+        transform: translateY(0) scale(0.95, 1.05);
+    }
+    65%,
+    100% {
+        transform: translateY(0) scale(1,1);
+    }
 }
