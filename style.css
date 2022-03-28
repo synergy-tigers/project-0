@@ -1,8 +1,13 @@
+/* 
+  created by: rhys kim
+  modified on: 03.28.2022
+*/
+
 /* variables */
 :root {
   --body-bg: #F0EFE5;
   --accent-bg: #AD8945;
-  --border-color: 57, 22%, 62%;
+  --border-color: #b3b189;
   --text-color: #251605;
   --accent-color: #B04830;
   
@@ -18,7 +23,7 @@ body {
   background-blend-mode: overlay;
   color: var(--text-color);
   box-sizing: border-box;
-  border: 3em solid hsla(var(--border-color), 45%);
+  border: 1em solid var(--border-color);
   margin: 0;
   min-height: 100vh;
 }
@@ -26,13 +31,22 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--header-font);
   font-weight: normal;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent-color);
 }
 
 /* scrollbox */
 main {
   box-sizing: border-box;
   min-width: calc(100vh - 6em);
-  max-height: calc(100vh - 6em);
+  height: calc(100vh - 2em + 1px);
   overflow-x: auto;
   padding: 1.5em;
 }
@@ -50,30 +64,41 @@ main {
   align-items: center;
 }
 
+/* spell fields */
 #spellFields {
   flex: 1 1 0;
   display: flex;
   flex-wrap: wrap;
 }
 
-#spellFields h2 {
-  margin: 0;
-}
-
+/* spell data in table */
 #spellData {
   flex: 1 1 0;
 }
 
-#spellData {
-  border: 1px solid hsl(var(--border-color));
-}
-
-#generateSpell {
-  display: block;
-  margin: 0 auto 1em;
+#spellData td {
+  border: 1px solid var(--border-color);
 }
 
 .tag {
   padding: 0.25em 0.5em;
   margin-right: 0.5em;
+}
+
+/* button styling */
+#generateSpell {
+  cursor: pointer;
+  display: block;
+  margin: 0 auto 1em;
+  font: bold 2em / 1 var(--body-font);
+  background-color: var(--accent-bg);
+  color: var(--text-color);
+  padding: .5em .75em;
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+}
+
+#generateSpell:active, #generateSpell:focus-visible {
+  background-color: var(--text-color);
+  color: var(--border-color);
 }

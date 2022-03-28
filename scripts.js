@@ -1,5 +1,5 @@
 // created by: rhys kim
-// modified last on: 03.27.2022
+// modified last on: 03.28.2022
 
 // grab the api url
 const apiUrl = "https://www.dnd5eapi.co";
@@ -50,12 +50,13 @@ function displayData(obj) {
 
           fields.append(title);
           let contentBody = title.insertAdjacentElement('afterend', field);
+          let keyString = key.replace("_", " ");
 
-          title.innerHTML = key;
+          title.innerHTML = keyString;
           // theres a lot of objects within objects...
-          if (isObject(value) && !(typeof value == "string")) {
-            let deepValue = iterate(value);
-            console.log(deepValue);
+          if (isObject(element)) {
+            iterate(value);
+            contentBody.innerHTML = value;
           } else {
             contentBody.innerHTML = value;
           }
@@ -67,9 +68,12 @@ function displayData(obj) {
           if (!(array.length == 0)) {
             // then add the name of each array to tablehead
             table.append(row);
+            
             let header = document.createElement('th');
             let thead = row.appendChild(header);
-            thead.innerHTML = key;
+            let keyString = key.replace("_", " ");
+           
+            thead.innerHTML = keyString;
             
             // loop through the array
             array.forEach(arrItem => {
@@ -80,6 +84,9 @@ function displayData(obj) {
                 let value = iterate(arrItem);
                 let item = thead.insertAdjacentElement('afterend', cell);
                 item.innerHTML += `<span class="tag">${value}</span>`;
+              } else if (key == "desc" | key == "higher_level") {
+                let item = thead.insertAdjacentElement('afterend', cell);
+                item.innerHTML += `<p>${arrItem}</p>`
               } else {
                 // else just print the array item
                 let item = thead.insertAdjacentElement('afterend', cell);
@@ -95,7 +102,10 @@ function displayData(obj) {
           } else {
             // then loop through the keys and print them out in headers
             fields.append(title);
-            title.innerHTML = key;
+
+            let keyString = key.replace("_", " ");
+            title.innerHTML = keyString;
+            
             let content = title.insertAdjacentElement("afterend", field);
             content.innerHTML = element;
           }
