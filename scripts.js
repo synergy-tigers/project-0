@@ -77,7 +77,11 @@ function displayData(obj) {
             let keyString = key.replaceAll("_", " ");
            
             thead.innerHTML = keyString;
+
+            let item = thead.insertAdjacentElement('afterend', cell);
             
+            let list = document.createElement('ul');
+            item.append(list);
             // loop through the array
             array.forEach(arrItem => {
               // check if the array is storing an obj
@@ -85,17 +89,17 @@ function displayData(obj) {
                 // if it is, then loop through and
                 // print out the result
                 let value = iterate(arrItem);
-                let item = thead.insertAdjacentElement('afterend', cell);
-                item.innerHTML += `<span class="tag">${value}</span>`;
+                
+                list.innerHTML += `<li>${value}</li>`;
               } else if (key == "desc" | key == "higher_level") {
-                let item = thead.insertAdjacentElement('afterend', cell);
-                item.innerHTML += `<p>${arrItem}</p>`
+                list.remove();
+                item.innerHTML += `<p>${arrItem}</p>`;
               } else {
                 // else just print the array item
-                let item = thead.insertAdjacentElement('afterend', cell);
-                item.innerHTML += `<span class="tag">${arrItem}</span>`;
+                list.innerHTML += `<li>${arrItem}</li>`;
               }
             });
+            console.log(item.innerHTML);
           }
           break;
         default:
