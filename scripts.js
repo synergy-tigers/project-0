@@ -35,11 +35,12 @@ function displayData(obj) {
       const element = obj[key];
 
       // first, set up the data in html
-      const body = document.getElementById("spellCard");
       const fields = document.getElementById("spellFields");
       const table = document.getElementById("spellData");
       let row = document.createElement("tr");
       let cell = document.createElement("td");
+      let section = document.createElement("div");
+      section.className = "flexBox";
       let title = document.createElement("h2");
       let field = document.createElement("p");
 
@@ -48,11 +49,13 @@ function displayData(obj) {
         case Object.prototype:
           let value = iterate(element);
 
-          fields.append(title);
-          let contentBody = title.insertAdjacentElement('afterend', field);
-          let keyString = key.replace("_", " ");
+          fields.append(section);
+          section.appendChild(title);
 
+          let keyString = key.replaceAll("_", " ");
           title.innerHTML = keyString;
+
+          let contentBody = title.insertAdjacentElement('afterend', field);
           // theres a lot of objects within objects...
           if (isObject(element)) {
             iterate(value);
@@ -71,7 +74,7 @@ function displayData(obj) {
             
             let header = document.createElement('th');
             let thead = row.appendChild(header);
-            let keyString = key.replace("_", " ");
+            let keyString = key.replaceAll("_", " ");
            
             thead.innerHTML = keyString;
             
@@ -101,13 +104,14 @@ function displayData(obj) {
             delete key;
           } else {
             // then loop through the keys and print them out in headers
-            fields.append(title);
-
-            let keyString = key.replace("_", " ");
+            fields.append(section);
+            section.appendChild(title);
+  
+            let keyString = key.replaceAll("_", " ");
             title.innerHTML = keyString;
-            
-            let content = title.insertAdjacentElement("afterend", field);
-            content.innerHTML = element;
+  
+            let contentBody = title.insertAdjacentElement('afterend', field);
+            contentBody.innerHTML = element;
           }
           break;
       }

@@ -29,4 +29,7 @@
 * Finally figured out how to loop through the data
 * Making some headway on creating the needed elements
 * Blocker: objects within objects within objects within objects
-* 
+
+# 03.28.2022
+* finished the javascript thank god
+* working on making the site look pretty

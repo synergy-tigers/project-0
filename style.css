@@ -6,7 +6,7 @@
 /* variables */
 :root {
   --body-bg: #F0EFE5;
-  --accent-bg: #AD8945;
+  --accent-bg: #9c7834;
   --border-color: #b3b189;
   --text-color: #251605;
   --accent-color: #B04830;
@@ -61,6 +61,7 @@ main {
 /* style the spell info */
 #spellCard {
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -69,6 +70,21 @@ main {
   flex: 1 1 0;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.flexBox {
+  padding: 1em 1.25em;
+  border: 1px solid var(--border-color);
+  margin-bottom: 0.5em;
+}
+
+.flexBox h2 {
+  line-height: 1;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 0.5em;
 }
 
 /* spell data in table */
@@ -76,29 +92,57 @@ main {
   flex: 1 1 0;
 }
 
+#spellData th {
+  background-color: var(--accent-bg);
+  color: var(--body-bg);
+  line-height: 1;
+  min-width: 10ch;
+  padding: 0.25em 0.5em;
+}
+
 #spellData td {
+  padding: 0.25em 0.5em;
   border: 1px solid var(--border-color);
 }
 
+#spellData td p {
+  margin-bottom: .5em;
+}
+
+#spellData td p:last-child {
+  margin-bottom: 0;
+}
+
 .tag {
-  padding: 0.25em 0.5em;
+  padding: 0.1em 0.25em;
   margin-right: 0.5em;
+  background-color: var(--border-color);
+  color: var(--text-color);
+  border-radius: 5px;
 }
 
 /* button styling */
 #generateSpell {
   cursor: pointer;
   display: block;
-  margin: 0 auto 1em;
+  margin: 0 auto .5em;
+  min-width: 10ch;
   font: bold 2em / 1 var(--body-font);
   background-color: var(--accent-bg);
   color: var(--text-color);
   padding: .5em .75em;
-  border: 2px solid var(--text-color);
+  border: 1px solid transparent;
   border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in;
 }
 
-#generateSpell:active, #generateSpell:focus-visible {
-  background-color: var(--text-color);
-  color: var(--border-color);
+#generateSpell:active, #generateSpell:hover {
+  background-color: var(--accent-color);
+  color: var(--body-bg);
+}
+
+#generateSpell:active, #generateSpell:focus {
+  outline: transparent solid 0px;
+  box-shadow: 0 0 0 3px var(--text-color);
 }
