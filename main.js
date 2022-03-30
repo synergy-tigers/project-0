@@ -23,3 +23,32 @@ previous.addEventListener('click', function(){
 document.getElementById('image').src = arr[i];
 })
 
+let weather = {
+    "apiKey": "f90d5b8d3c77b9f8344263b1f9c7aaa1",
+    fetchWeather: function(city){
+        fetch(
+        "https://api.openweathermap.org/data/2.5/weather?q="
+         + city 
+         + "&units=metric&appid=" 
+         + this.apiKey
+        )
+        .then((response) => response.json())
+        .then((data) => this.displayWeather(data));
+    },
+    displayWeather: function(data) {
+        const { name } = data;
+        const { temp } = data.main;
+        console.log(name,temp)
+        document.querySelector(".city").innerText = "weather in " + name;
+        document.querySelector(".temp").innerText = temp + "C";
+    },
+
+    search: function () {
+    this.fetchWeather(document.querySelector(".search-bar").value);
+    },
+};
+document.getElementById("searchBtn").next.addEventListener('click',  function (){
+    weather.search();
+  });
+
+   
