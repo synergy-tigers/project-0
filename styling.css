@@ -6,11 +6,12 @@
 :root {
     --main-color: rgb(56, 128, 243);
     --main-secondary: pink;
-    --section-color: #00A36C;
+    --section-color: #00a36dc0;
     --font-color: #ffffff;
     --button-color: #a7ccb5;
 }
 
+/* style for all buttons with a hover function */
 button {
     font-size: 20px;
     background-color: var(--button-color);
@@ -25,6 +26,7 @@ button:hover {
     color: var(--main-color);
 }
 
+/* alters image sizes to fit on the page */
 img {
     height: 200px;
     border: 2px solid var(--palette-light);
@@ -59,6 +61,8 @@ thead th {
     width: 25%;
 }
 
+
+/* formats the table to only have a black border */
 table {
     border-collapse: collapse;
     border: 1px solid black;
@@ -74,6 +78,7 @@ caption {
     margin-bottom: 5px;
 }
 
+/* sets format for all the objects in body of the page */
 body {
     font-family: "Raleway", sans-serif;
     text-align: center;
@@ -86,6 +91,7 @@ body {
     margin: 0;
 }
 
+/* creates a green block for the other elements in the websites to sit in */
 section {
     background-color: var(--section-color);
     border-radius: 5px;
@@ -93,10 +99,7 @@ section {
     padding: 0.8rem 1rem 1rem;
 }
 
-#reset {
-    background-color: red;
-}
-
+/* used for spacing in a section */
 #section-organizer {
     display: flex;
     justify-content: center;
@@ -104,6 +107,7 @@ section {
     padding: 0.8rem 1rem 1rem;
 }
 
+/* used to evenly space images in section */
 #hobbies-imgs{
     display: flex;
     justify-content: space-around;
