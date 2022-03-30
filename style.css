@@ -100,7 +100,7 @@ a.article-link {
         flex-basis: 100%;
     }
 }
-
+/*
 #search-box {
     width: 100%;
     position: relative;
@@ -122,20 +122,8 @@ a.article-link {
   color: #00B4CC;
 }
 
-/* ::placeholder { */
-/*     color: var(--pale-yellow); */
-/* } */
-
-/* :-ms-input-placeholder { */
-/*     color: var(--soft-yellow); */
-/* } */
-
-/* ::-ms-input-placeholder  { */
-/*     color: var(--soft-yellow); */
-/* } */
-
 #search {
     margin: 0 auto;
     display: block;
-}
+} */
 
