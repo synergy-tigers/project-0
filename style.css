@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+:root {
+    /* color palette 2, sunset reds */
+    --beige: #F6E7D8;
+    --mild-orange: #F68989;
+    --pale-red: #C65D7B;
+    --dark-red: #874356;
+    /* color palette 3, mild darks */
+    --dark-blue: #151D3B;
+    --mild-red: #D82148;
+    --pale-green: #6EBF8B;
+    --green-beige: #DADBBD;
+    /* color palette 4, darks and yellows */
+    --light-beige: #EEEDDE;
+    --pale-yellow: #E0DDAA;
+    --dark-green: #203239;
+    --sdark-blue: #141E27;
+    /* color palette 5, pale blues and greens */
+    --dull-blue: #495371;
+    --dull-green: #74959A;
+    --soft-green: #98B4AA;
+    --soft-yellow: #F1E0AC;
+}
+
+body {
+    background-color: var(--dull-green);
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    color: var(--soft-yellow);
+    text-align: center;
+}
+
+a.article-link {
+    color: var(--soft-yellow);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.underline::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0074D9;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+.container {
+    max-width: 1335px;
+    margin: 0 auto;
+}
+
+.container-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.article-block {
+    background-color: var(--dull-blue);
+    border-radius: 3px;
+    height: 100px;
+    flex-basis: 20%;
+    -ms-flex: auto;
+    width: 260px;
+    position: relative;
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+@media(max-width: 1080px) {
+    .article-block {
+        flex-basis: 33.33%;
+    }
+}
+
+@media(max-width: 820px) {
+    .article-block {
+        flex-basis: 50%;
+    }
+}
+
+@media(max-width: 550px) {
+    .grid-item {
+        flex-basis: 100%;
+    }
+}
+
+#search-box {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#search {
+    width: 30%;
+    border: 3px solid #00B4CC;
+    padding: 5px;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+#search:focus {
+  color: #00B4CC;
+}
+
+/* ::placeholder { */
+/*     color: var(--pale-yellow); */
+/* } */
+
+/* :-ms-input-placeholder { */
+/*     color: var(--soft-yellow); */
+/* } */
+
+/* ::-ms-input-placeholder  { */
+/*     color: var(--soft-yellow); */
+/* } */
+
+#search {
+    margin: 0 auto;
+    display: block;
+}
+
