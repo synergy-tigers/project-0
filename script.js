@@ -17,6 +17,16 @@ async function getTopArticles() {
     return response.json();
 }
 
+async function getTopSectionArticles(section) {
+        const req = new Request(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=yourkeyQARWESrFwfyskv5UWjOVAfpdBqktU90y`);
+
+    const response = await fetch(req);
+    if (!response.ok) {
+        throw new Error(response);
+    }
+    
+    return response.json();
+}
 /* I was getting 500 errors when trying to use the search API,
   so I could not include this feature. I'm leaving the code in
   and just commenting it out to show that I tried. 
@@ -49,18 +59,27 @@ function generatePage(response) {
     for (let article of response.results) {
         const articleblock = document.createElement("div");
         articleblock.setAttribute("class", "article-block");
-            
+
+        if (article.media[0]) {
+            const articleImage = document.createElement("img");
+            articleImage.setAttribute("src", article.media[0]['media-metadata'][0].url);
+            articleImage.setAttribute("class", "article-image")
+            articleblock.appendChild(articleImage);
+        }
+        
         const titleLink = document.createElement("a");
         titleLink.setAttribute("href", article.url);
         titleLink.setAttribute("class", "article-link underline");
-            
+        
         const titleText = document.createTextNode(article.title);
 
         titleLink.appendChild(titleText);
         articleblock.appendChild(titleLink);
 
-        const container = document.querySelector(".container-row");
+        const container = document.querySelector("#news-grid");
         container.appendChild(articleblock);
+        
+        
     }
 }
 
@@ -69,4 +88,9 @@ function displayTopArticles() {
         .then(response => {
             generatePage(response);
         })
+}
+
+function clearGrid() {
+    const gridContainer = document.querySelector(".news-grid");
+    gridContainer.innerHTML = "";
 }
