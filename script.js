@@ -130,8 +130,6 @@ function generatePage(response) {
 
         const container = document.querySelector("#news-grid");
         container.appendChild(articleblock);
-        
-        
     }
 }
 

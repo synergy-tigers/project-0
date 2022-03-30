@@ -9,6 +9,7 @@
 body {
     background-color: var(--light-beige);
     font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
 }
 
 h1 {
@@ -18,7 +19,6 @@ h1 {
 
 a.article-link {
     color: var(--dull-blue);
-    font-size: 14px;
     text-decoration: none;
 }
 
@@ -54,6 +54,8 @@ a.article-link {
 
 .article-image {
     float: left;
+    width: 75px;
+    hight: 75px;
 }
 
 .article-block {
@@ -92,6 +94,23 @@ a.article-link {
         flex-basis: 100%;
     }
 }
+
+button {
+  display: inline-flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid #BFC0C0;
+  margin: 20px;
+  color: var(--dark-blue);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 /*
 #search-box {
     width: 100%;
