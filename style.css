@@ -76,10 +76,10 @@ main {
 #info img[src="wand.png"] {
   display: block;
   position: fixed;
+  z-index: 1;
   top: 1em;
   left: 1em;
-  width: 18em;
-  user-select: none;
+  max-width: 18em;
   transform: scaleX(-1);
 }
 
