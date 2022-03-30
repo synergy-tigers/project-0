@@ -29,12 +29,12 @@
   body {
     /* Measurements can be static (px) or responsive (vw, vh, em, rem, %) */
     margin: 0;
-    padding: 0;
+    padding: 10;
   }
   
   img {
-    height: 200px;
-    border: 2px solid var(--palette-light);
+    height: 798px;
+    border: 50px solid var(--palette-light);
     border-radius: 5px;
     transition: 0.5s;
   }
