@@ -3,7 +3,7 @@
 <!-- 
     Created By: Andy Park
     Created date: 3/24/2022
-    Last Updated: 3/24/2022
+    Last Updated: 3/30/2022
     Description: Challenge II    
                  Create an About Me site page. The page should have 3 parts:
                  1. A paragraph about you.
@@ -23,47 +23,147 @@
 
 <head>
 
-    <!-- Title is a required tag in HTML 5 -->
-    <title>Challenge 2</title>
-    <meta name="keywords" content="Challenge, beginner, Intro, Introduction, Web, Developer, WebDev, HTML, CSS, JavaScript, JS"/>
-    <meta name="description" content="An Introduction to basic WebDev technologies."/>
-    <meta name="revised" content="Revature, 3/24/2022"/>
+    <!-- Title of my Project 0 -->
+    <title>Project 0</title>
+    <meta name="keywords" content="Challenge, Travelling, hobbies, favorite, about me,  Software Engineer"/>
+    <meta name="description" content="About me"/>
+    <meta name="revised" content="Revature, 3/30/2022"/>
     <meta name="author" content="Andy Park"/>
 
-    <!-- If needed, CSS is going to be here. -->
+    <!-- my stying CSS  -->
+    <link rel="stylesheet" href="styling.css" />
 
-    <!-- 
-        Other tags that go in the head:
-        <base> : Specifies a default URL and target for all page links
-        <noscript> : Defines alternate content that displays if Java Script is not supported
-    -->
-
+    <!-- Javascript -->
+    <script type="module" src="controller.js"></script>
+    
 </head>
 
-<!-- This is part 1. A paragraph about you.-->
-<!-- This is part 1. A paragraph about you.-->
+<!-- This is part 1. A paragraph about me.-->
+<!-- This is part 1. A paragraph about me.-->
 
 <!-- The body is used for tags that should be rendered. Note that tags will still render if placed in the head. -->
 <body>
+   
+
     <!-- Header tags are block elements. This means they take up their entire container width and add a line break. -->
     <h1>Welcome to my page!</h1>
-    <h3>Here is some information about me.</h3>
+    <h2>Here is some information about me.</h2>
 
     <section id="info-section:"> 
         <a href="https:/www.nytimes.com/">But first, a link to New York Times</a>
-        <p>My name is Andy Park. I was born in South Korea. I live in New Jergey just accross Hudson River from New York City. </p>
-<!-- Until here, this is part 1. A paragraph about you. -->
+        <p>My name is Andy Park. I was born in South Korea. 
+        I live in New Jergey just accross Hudson River from New York City.</p>
+
+        <p>I am so Passionate, Never-give-up & Eager-to-learn.</p>
+
+        <p>I am challenging the new career as a software engineer 
+        in order to be an expert in the near future.</p>
+
+        <p>I can speak Korean and Japanese fluently.
+        I can speak Spanish and German a little. </p>
+<!-- Until here, this is part 1. A paragraph about me. -->
+
+<h3>This is a table of the cities or places and their countries where I travelled so far:</h3>
+
+<!-- table, tr, th and td tags define a table -->
+<table>
+    <tr>
+        <th>Cities or places</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td>Florence</td>
+        <td>Italy</td>
+    </tr>
+    <tr>
+        <td>Venice</td>
+        <td>Italy</td>
+    </tr>
+    <tr>
+        <td>Rome</td>
+        <td>Italy</td>
+    </tr>
+    <tr>
+        <td>Berlin</td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Amsterdam</td>
+        <td>Holland</td>
+    </tr>
+    <tr>
+        <td>Kyoto</td>
+        <td>Japan</td>
+    </tr>
+    <tr>
+        <td>Tokyo</td>
+        <td>Japan</td>
+    </tr>
+    <tr>
+        <td>Kobe</td>
+        <td>Japan</td>
+    </tr>
+    <tr>
+        <td>Nara</td>
+        <td>Japan</td>
+    </tr>
+    <tr>
+        <td>Osaka</td>
+        <td>Japan</td>
+    </tr>
+    <tr>
+        <td>Yokohama</td>
+        <td>Japan</td>
+    </tr>
+    <tr>
+        <td>Beijing</td>
+        <td>China</td>
+    </tr>
+    <tr>
+        <td>Shanghai</td>
+        <td>China</td>
+    </tr>
+    
+        <td>Penomphen</td>
+        <td>Cambodia</td>
+    </tr>
+    <tr>
+        <td>Angkor Wat</td>
+        <td>Cambodia</td>
+    </tr>
+    <tr>
+        <td>Seoul</td>
+        <td>Korea</td>
+    </tr>
+    <tr>
+        <td>Kyoungju</td>
+        <td>Korea</td>
+    </tr>
+    <tr>
+        <td>Busan</td>
+        <td>Korea</td>
+    </tr>
+    <tr>
+        <td>Gwangju</td>
+        <td>Korea</td>
+    </tr>
+
+
+
+</table>
 
 <!-- This is part 2. A list of hobbies or favorite things. -->
         <p>These are my hobbies or favorite things:</p>
         <ul>
             <li>Travelling</li>
+            <li>Listening Amercian Pop Songs</li>
             <li>Playing Tennis or Table Tennis</li>
             <li>Watching Premier League Soccer Game</li>
-            <li>Watching Major Tennis Game</li>
-            <li>Listening Amercian Pop Songs</li>
+            <li>Watching Major Tennis Game</li>            
             <li>Gardening</li>
             <li>Cooking</li>
+            <li>Studying</li>
+            <li>Researching</li>
         </ul>
     </section>
 <!-- Until here, this is part 2. A list of hobbies or favorite things. -->
@@ -84,6 +184,47 @@
 
 </section>
 <!-- Until here, this is 3. An image of your choosing. -->
+
+
+<section id="with-css">
+
+    <h1 class="centered">Let's try 'the morning greeting' in other languages.</h1>
+
+<section id="with-javascript-externalAPI">
+    <div class="Translation">
+<!--    <p>Let's translate 'Good morning' to the language which you want.</p> -->
+
+        <!-- Using Javascript and calling out to an external API,-->
+        <!-- testing for 'Good morning", translation result in Spanish: Buenos dí6as."-->
+<!--     <p><For example></p> -->
+<!--     <p>Please type 'Good morning' in order get the result in Japanese.</p> -->
+
+
+        <div class="container">
+            <section>
+                <h2>Type "Good morning" in the box and hit 'Translate'!</h2>
+            </section>
+        
+            <section tabindex="0" role ="translate">
+                <input aria-label="Good morning input" type="text" class="text-box" value="Good morning" /> 
+                <button id="translate">Translate</button>
+            </section>
+        
+            <section class="results-section">
+                <div class="translate-results">
+                    <div class="panel">
+                        <h3 class="translate-language">language</h3>
+                        <ul id="language" class="translate-language">
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>       
+        
+        
+    </div>
+</section>
+</section>
 
 </body>
 
