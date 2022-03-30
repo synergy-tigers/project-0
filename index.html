@@ -33,8 +33,8 @@
     <!-- my stying CSS  -->
     <link rel="stylesheet" href="styling.css" />
 
-    <script src="controller.js"></script>
-
+    <!-- Javascript -->
+    <script type="module" src="controller.js"></script>
     
 </head>
 
@@ -43,6 +43,8 @@
 
 <!-- The body is used for tags that should be rendered. Note that tags will still render if placed in the head. -->
 <body>
+   
+
     <!-- Header tags are block elements. This means they take up their entire container width and add a line break. -->
     <h1>Welcome to my page!</h1>
     <h2>Here is some information about me.</h2>
@@ -186,17 +188,40 @@
 
 <section id="with-css">
 
-    <h2 class="centered">Let's try 'the morning greeting' in other languages.</h2>
+    <h1 class="centered">Let's try 'the morning greeting' in other languages.</h1>
 
 <section id="with-javascript-externalAPI">
     <div class="Translation">
-        <p>Let's translate 'Good morning' to the language which you want.</p>
+<!--    <p>Let's translate 'Good morning' to the language which you want.</p> -->
 
         <!-- Using Javascript and calling out to an external API,-->
         <!-- testing for 'Good morning", translation result in Spanish: Buenos dí6as."-->
-        <p><For example></p>
-        <p>Please type 'Good morning' in order get the result in Japanese.</p>
+<!--     <p><For example></p> -->
+<!--     <p>Please type 'Good morning' in order get the result in Japanese.</p> -->
 
+
+        <div class="container">
+            <section>
+                <h2>Type "Good morning" in the box and hit 'Translate'!</h2>
+            </section>
+        
+            <section tabindex="0" role ="translate">
+                <input aria-label="Good morning input" type="text" class="text-box" value="Good morning" /> 
+                <button id="translate">Translate</button>
+            </section>
+        
+            <section class="results-section">
+                <div class="translate-results">
+                    <div class="panel">
+                        <h3 class="translate-language">language</h3>
+                        <ul id="language" class="translate-language">
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>       
+        
+        
     </div>
 </section>
 </section>
