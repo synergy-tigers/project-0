@@ -9,7 +9,7 @@
 body {
     background-color: var(--light-beige);
     font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 h1 {
@@ -55,7 +55,8 @@ a.article-link {
 .article-image {
     float: left;
     width: 75px;
-    hight: 75px;
+    height: 75px;
+    margin-right: 2px;
 }
 
 .article-block {
