@@ -1,5 +1,5 @@
 html {
-    background-color: rgb(245, 218, 186);
+    background-color: rgba(255, 162, 243, 0.651);
     height: 100%
 }
 
@@ -20,7 +20,7 @@ th, td {
 }
 
 #picture-array {
-    justify-content: flex-end;
+    justify-content: center;
     height: 200px;
     width: 300px;
     margin-left: 10px;
@@ -34,12 +34,12 @@ th, td {
     
 }
 .weather {
-    background-color: rgb(113, 189, 255);
-    border: 20px;
-    border-bottom: 50px;
-    margin: 30px;
-    margin-bottom: 100px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(132, 252, 252, 0.76);
+    
 }
 
 .btn {

@@ -1,6 +1,6 @@
-async function getSong(SongName) {
-    pokemonName = nameForApi(songName);
-    const req = new Request('APINAME' + songName);
+/*async function getSong(SongName) {
+    songName = nameForApi(songName);
+    const req = new Request('https://genius.p.rapidapi.com/search?q=meat%20loaf' + songName);
 
     const response = await fetch(req);
     if (!response.ok) {
@@ -37,3 +37,5 @@ function capitalizeWord(word) {
 }
 
 export { getSong, nameForDisplay };
+
+*/
